@@ -1,4 +1,4 @@
-defmodule Precios do
+defmodule CalculoPrecios do
 
   def precio_final(%Producto{nombre: nombre, precio_sin_iva: precio, iva: iva}) do
     precio_calculado = precio * (1 + iva)
