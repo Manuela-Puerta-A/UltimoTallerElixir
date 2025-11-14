@@ -1,4 +1,4 @@
-defmodule Carrera do
+defmodule carrera do
   @vueltas 3
 
   def simular_carrera(%Car{piloto: piloto, vuelta_ms: vms, pit_ms: pms}) do
