@@ -1,3 +1,11 @@
+# Cargar los módulos necesarios
+Code.require_file("paquete.ex", __DIR__)
+Code.require_file("benchmark.ex", __DIR__)
+Code.require_file("servidor_paquete.ex", __DIR__)
+Code.require_file("cliente_paquetes.ex", __DIR__)
+
+# Iniciar el servidor
+
 spawn(ServidorPaquetes, :iniciar, [])
 :timer.sleep(100)
 
