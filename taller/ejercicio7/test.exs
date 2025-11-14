@@ -1,3 +1,7 @@
+Code.require_file("benchmark.ex", __DIR__)
+Code.require_file("carrito.ex", __DIR__)
+Code.require_file("cliente_descuentos.ex", __DIR__)
+Code.require_file("servidor_descuentos.ex", __DIR__)
 spawn(ServidorDescuentos, :iniciar, [])
 :timer.sleep(100)
 
