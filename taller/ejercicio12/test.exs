@@ -1,3 +1,9 @@
+Code.require_file("tpl.ex", __DIR__)
+Code.require_file("benchmark.ex", __DIR__)
+Code.require_file("servidor_render.ex", __DIR__)
+Code.require_file("cliente_render.ex", __DIR__)
+
+
 spawn(ServidorRender, :iniciar, [])
 :timer.sleep(100)
 
