@@ -1,4 +1,4 @@
-defmodule cafeteria do
+defmodule Cafeteria do
 
   def preparar(%Orden{id: id, item: item, prep_ms: tiempo}) do
     :timer.sleep(tiempo)
