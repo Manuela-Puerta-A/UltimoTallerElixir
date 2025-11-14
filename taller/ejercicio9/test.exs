@@ -1,3 +1,7 @@
+Code.require_file("notif.ex", __DIR__)
+Code.require_file("benchmark.ex", __DIR__)
+Code.require_file("servidor_notificaciones.ex", __DIR__)
+Code.require_file("cliente_notificaciones.ex", __DIR__)
 spawn(ServidorNotificaciones, :iniciar, [])
 :timer.sleep(100)
 
