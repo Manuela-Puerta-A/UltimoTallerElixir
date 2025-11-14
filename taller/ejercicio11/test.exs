@@ -1,3 +1,11 @@
+# Cargar los módulos necesarios
+Code.require_file("comentario.ex", __DIR__)
+Code.require_file("benchmark.ex", __DIR__)
+Code.require_file("servidor_moderacion.ex", __DIR__)
+Code.require_file("cliente_moderacion.ex", __DIR__)
+
+# Iniciar el servidor
+
 spawn(ServidorModeracion, :iniciar, [])
 :timer.sleep(100)
 
