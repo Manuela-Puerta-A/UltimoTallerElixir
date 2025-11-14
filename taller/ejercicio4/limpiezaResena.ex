@@ -1,4 +1,4 @@
-defmodule limpiezaResena do
+defmodule LimpiezaResenas do
 
   def limpiar(%Review{id: id, texto: texto}) do
     delay = Enum.random(5..15)
@@ -30,18 +30,18 @@ defmodule limpiezaResena do
     |> Enum.join(" ")
   end
 
-  def procesar_secuencial(reseñas) do
-    Enum.map(reseñas, &limpiar/1)
+  def procesar_secuencial(resenas) do
+    Enum.map(resenas, &limpiar/1)
   end
 
-  def procesar_concurrente(reseñas) do
-    Enum.map(reseñas, fn reseña ->
-      Task.async(fn -> limpiar(reseña) end)
+  def procesar_concurrente(resenas) do
+    Enum.map(resenas, fn resena ->
+      Task.async(fn -> limpiar(resena) end)
     end)
     |> Task.await_many()
   end
 
-  def generar_reseñas(cantidad) do
+  def generar_resenas(cantidad) do
     textos = [
       "El producto es excelente y de buena calidad",
       "La atención fue mala y el servicio lento",
