@@ -1,3 +1,6 @@
+Code.require_file("benchmark.ex", __DIR__)
+Code.require_file("cliente_backoffice.ex", __DIR__)
+Code.require_file("servidor_backoffice.ex", __DIR__)
 spawn(ServidorBackoffice, :iniciar, [])
 :timer.sleep(100)
 
