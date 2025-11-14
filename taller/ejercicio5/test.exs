@@ -1,3 +1,8 @@
+# Cargar los módulos necesarios
+Code.require_file("Sucursal.ex", __DIR__)
+Code.require_file("benchmark.ex", __DIR__)
+Code.require_file("GeneradorReportes.ex", __DIR__)
+
 sucursales = GeneradorReportes.lista_sucursales()
 
 IO.puts("\nsecuencial")
