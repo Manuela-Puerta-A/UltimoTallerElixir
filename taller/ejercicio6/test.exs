@@ -1,3 +1,10 @@
+# Cargar los módulos necesarios
+Code.require_file("User.ex", __DIR__)
+Code.require_file("benchmark.ex", __DIR__)
+Code.require_file("servidor-validacion.ex", __DIR__)
+Code.require_file("cliente-validacion.ex", __DIR__)
+
+# Iniciar el servidor
 spawn(ServidorValidacion, :iniciar, [])
 :timer.sleep(100)
 
